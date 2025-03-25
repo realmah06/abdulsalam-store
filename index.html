@@ -1,1 +1,68 @@
-
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Abdulsalam Store</title>
+  <link rel="shortcut icon" href="logos.jpg" type="image/x-icon" />
+  <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="css/index.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+  <div class="header">
+    <div class="brand">
+      <img src="logos.jpg" alt="logo" ondblclick="showPopup()">
+      <h3>Abdulsalam Store.</h3>
+    </div>
+    <div class="list">
+      <ul>
+        <li><i class="bi bi-house-check-fill"></i> Home</li>
+        <li><i class="bi bi-award-fill"></i> Abdulsalam's Certification</li>
+        <li><i class="bi bi-envelope-at-fill"></i> Contact Us</li>
+        <li><i class="bi bi-chat-square-quote-fill"></i> Feed Back</li>
+      </ul>
+    </div>
+  </div>
+  <div class="content">
+    <br /><br />
+    <h1>Abdulsalam Store. <span>Shop Smart &</span> <br /> Live Better.</h1>
+    <p>At <b>Abdulsalam Store</b>, we bring you the freshest groceries, quality household essentials, and unbeatable prices—all under one roof! Whether you're shopping for fresh produce, premium meats, dairy, or everyday essentials, we ensure top quality at the best value. Our friendly staff and well-stocked aisles make shopping easy, convenient, and enjoyable.</p>
+    
+    <img src="photo.jpeg" alt="photo">
+    <br />
+    <p><i class="bi bi-geo-fill"></i> Address: <b><i>Shop No A1 & A2, Al-ameen Plaza, Adjacent to UBA Bank Pz, Zaria.</i></b></p>
+    <p><i class="bi bi-telephone-fill"></i> Contact: <i><b>0800000000. 0900000000 or mail to abdulsalamstore@gmail.com</b></i></p>
+  </div>
+  <footer>
+    &copy; <b>Abdulsalam Store Management 2025.</b> || Powered by <b>Mahadi Abubakar</b>
+  </footer>
+  
+  <!-- Popup Form -->
+    <div class="overlay" id="overlay"></div>
+    <div class="popup-container" id="popupForm">
+      <br />
+        <center><i class="bi bi-person-circle"></i></center>
+        <br /><br />
+        <form id="loginForm">
+          <div class="form-group">
+            <label for="Username">Username</label>
+            <input type="text" name="username" id="username" placeholder="Username"/>
+          </div>
+          <div class="form-group">
+            <label for="Password">Password</label>
+            <input type="password" name="password" id="password" placeholder="Password" />
+          </div>
+          <input type="checkbox" style="margin: 10px;"> <span style="color: #fff;font-weight: bold;">Keep me logged</span> <a href="#">Forgot Password?</a>
+          <br /><br />
+          <hr style="border: 1px solid #192D40;">
+          <div class="form-footer">
+            <button type="submit" style="background-color: #125260;">Sign In</button>
+            <button type="reset" onclick="closePopup()" style="background-color: #882509;">Close</button>
+          </div>
+        </form>
+    </div>
+    <script src="js/index.js"></script>
+</body>
+</html>
