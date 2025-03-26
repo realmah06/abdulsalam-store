@@ -56,7 +56,7 @@ function showPopup() {
                           },
                             showConfirmButton: true
                         }).then(() => {
-                            window.location.href = 'admin/dashboard.html'; // Redirect
+                            window.location.href = 'dashboard.html'; // Redirect
                         });
                     } else {
                         Swal.fire({
