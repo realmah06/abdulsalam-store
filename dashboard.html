@@ -8,8 +8,217 @@
   <link rel="shortcut icon" href="logos.jpg" type="image/x-icon" />
   <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
   <link rel="stylesheet" href="css/dashboard.css" type="text/css" media="all" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 <body>
+  <div class="nav">
+    <p><i class="bi bi-person-circle"></i> User: Abubakar Abubakar</p>
+    <p><i class="bi bi-ui-checks"></i> Role: Super Admin</p>
+    <p><i class="bi bi-calendar2-check"></i> Last login: 00/00/000</p>
+  </div>
+  <div class="header">
+    <div class="logo">
+      <img src="logos.jpg" alt="logo" height="50">
+    </div>
+    <div class="list">
+      <a href="dashboard.html"><i class="bi bi-house-check"></i> Home</a>
+      <a href="#"><i class="bi bi-receipt-cutoff"></i> Sales Invoice</a>
+      <div class="dropdown">
+        <a href="#"><i class="bi bi-cart4"></i> Inventory Management <i class="bi bi-arrow-down-short"></i></a> <!-- Main Menu -->
+        <div class="dropdown-content">
+            <a href="#"><i class="bi bi-cart-plus"></i> Place Order</a>
+            <a href="#"><i class="bi bi-layers"></i> Stock Adjustment </a>
+            <a href="#"><i class="bi bi-shop"></i> Inter-Store Transfer</a>
+            <a href="#"><i class="bi bi-bag"></i> Product Refund</a>
+            <a href="#"><i class="bi bi-upc-scan"></i> Scanning Barcode</a>
+        </div>
+    </div>
+    
+    <div class="dropdown">
+        <a href="#"><i class="bi bi-cash-stack"></i> Account Management <i class="bi bi-arrow-down-short"></i></a> <!-- Main Menu -->
+        <div class="dropdown-content">
+            <a href="#"><i class="bi bi-coin"></i> &nbsp; Bank Account</a>
+            <a href="#"><i class="bi bi-arrows-angle-expand"></i>  &nbsp;Credit & Debit Note </a>
+            <a href="#"><i class="bi bi-credit-card-2-back"></i>&nbsp; Customer Payment</a>
+            <a href="#"><i class="bi bi-cash"></i>&nbsp; Cash Flow</a>
+        </div>
+    </div>
+    
+    <div class="dropdown">
+        <a href="#"><i class="bi bi-folder-plus"></i> Registration <i class="bi bi-arrow-down-short"></i></a> <!-- Main Menu -->
+        <div class="dropdown-content">
+            <a href="#"><i class="bi bi-bag-plus"></i> &nbsp;Product Setup</a>
+            <a href="#"><i class="bi bi-person-add"></i> &nbsp; Customer Setup</a>
+            <a href="#"><i class="bi bi-building-add"></i> &nbsp;Supplier Setup</a>
+            <a href="#"><i class="bi bi-database-add"></i> &nbsp; Expenses Setup</a>
+            <a href="#"><i class="bi bi-shop-window"></i> &nbsp; Branch Setup</a>
+            <a href="#"><i class="bi bi-eject"></i> &nbsp; Employee Setup</a>
+            <a href="#"><i class="bi bi-patch-check"></i> &nbsp; User Setup</a>
+        </div>
+    </div>
+    
+    <a href="#"><i class="bi bi-arrow-up-right-circle"></i> Payroll</a>
+    <a href="#"><i class="bi bi-cloud-haze"></i> Report</a>
+    <a href="#"><i class="bi bi-box-arrow-left"></i> Logout</a>
+    </div>
+  </div>
+  <div class="content">
+    <br />
+    <div class="summary">
+      <div class="item">
+        <i class="bi bi-share"></i><br /><br />
+        <p>₦0.00</p>
+        <h3>Credit Sales</h3>
+      </div>
+      <div class="item">
+        <i class="bi bi-credit-card-2-back"></i><br /><br />
+        <p>₦0.00</p>
+        <h3>Cash Sales</h3>
+      </div>
+      <div class="item">
+        <i class="bi bi-usb-symbol"></i><br /><br />
+        <p>0.00</p>
+        <h3>Daily Expenses</h3>
+      </div>
+      <div class="item">
+        <i class="bi bi-unity"></i><br /><br />
+        <p>0.00</p>
+        <h3>Discount & Offers</h3>
+      </div>
+      <div class="item">
+        <i class="bi bi-bank2"></i><br /><br />
+        <p>0.00</p>
+        <h3>Confirmed Bank Details</h3>
+      </div>
+    </div>
+    <br />
+    <h1 style="margin: 7px;color: darkblue;font-size: 23px;">Dashboard</h1>
+    <hr style="border: 1px solid darkgreen;margin: 10px;" />
+    <h2 style="color: darkred;margin: 7px;text-align: center;font-size: 28px;font-family: cursive;"><i class="bi bi-shop-window"></i> Branches Daily Sales</h2>
+    <hr style="border: 1px solid darkgreen;margin: 10px;" />
+    <div class="branches-sales">
+      <li><i class="bi bi-shop-window"></i> 1. Shop A-1 & A-2 Al-ameen Plaza <span>₦0.00</span></li>
+      <li><i class="bi bi-shop-window"></i> 2. Shop No-05 Park Road Sabon Gari <span>₦0.00</span></li>
+      <li><i class="bi bi-shop-window"></i> 3. Madaci Gwargwaje Branch <span>₦0.00</span></li>
+      <li><i class="bi bi-shop-window"></i> 4. Zaria Flyover Branch  <span>₦0.00</span></li>
+      <li><i class="bi bi-shop-window"></i> 5. Shop B-12 Tudun Wada Zaria <span>₦0.00</span></li>
+    </div>
+    <br />
+    <br />
+    <div class="tabs">
+  <div class="tab active" data-tab="balances">
+    <i class="bi bi-database"></i><br>
+    <h3>Balances</h3>
+  </div>
+  <div class="tab" data-tab="account">
+    <i class="bi bi-bank2"></i><br>
+    <h3>Account</h3>
+  </div>
+  <div class="tab" data-tab="sales">
+    <i class="bi bi-archive"></i><br>
+    <h3>Sales Details</h3>
+  </div>
+  <div class="tab" data-tab="transit">
+    <i class="bi bi-airplane-engines"></i><br>
+    <h3>Goods Transit</h3>
+  </div>
+  <div class="tab" data-tab="inventory">
+    <i class="bi bi-tags"></i><br>
+    <h3>Inventory Record</h3>
+  </div>
+  <div class="tab" id="refresh">
+    <i class="bi bi-arrow-clockwise"></i><br>
+    <h3>Refresh</h3>
+  </div>
+</div>
+
+<div class="contents active" id="balances">
+  <br />
+  <div class="row">
+    <div class="modal">
+      <h3>Customer Balances on <span class="current-date"></span></h3>
+      <input type="search" name="search-customer" id="search-customer" placeholder="Search..." />
+      <ul class="accounts"></ul>
+    </div>
+    <div class="modal">
+      <h3>Bank Balances on <span class="current-date"></span></h3>
+       <input type="search" name="search-bank" id="search-bank" placeholder="Search..." />
+       <ul class="accounts"></ul>
+    </div>
+  </div>
+  <br />
+  <hr style="border: 1px solid darkgreen;" />
+  <br />
+  <div class="row">
+    <div class="modal">
+      <h3>Expenses Balances on <span class="current-date"></span></h3>
+      <input type="search" name="search-expenses" id="search-expenses" placeholder="Search..." />
+      <ul class="accounts"></ul>
+    </div>
+    <div class="modal">
+      <h3>Supplier Balances on <span class="current-date"></span></h3>
+       <input type="search" name="search-supplier" id="search-supplier" placeholder="Search..." />
+       <ul class="accounts"></ul>
+    </div>
+  </div>
+    <br />
+  <hr style="border: 1px solid darkgreen;" />
+  <br />
   
+    <div class="row">
+    <div class="modal">
+      <h3>Capital Balances on <span class="current-date"></span></h3>
+      <input type="search" name="search-capital" id="search-capital" placeholder="Search..." />
+      <ul class="accounts"></ul>
+    </div>
+    <div class="modal">
+      <h3>Profit Balances on <span class="current-date"></span></h3>
+       <input type="search" name="search-profit" id="search-profit" placeholder="Search..." />
+       <ul class="accounts"></ul>
+    </div>
+  </div>
+    <br />
+  <hr style="border: 1px solid darkgreen;" />
+  <br />
+  
+  <div class="row">
+    <div class="modal">
+      <!--<small style="font-weight: bold;margin: 8px;font-size: 16px;margin-bottom: 20px;">Total Credit Balances on <span class="current-date"></span></small>-->
+      <br />
+      <h3>Total Customer Balances <span>₦0.00</span></h3>
+      <h3>Total Bank Balances <span>₦0.00</span></h3>
+      <h3>Total Expenses Balances <span>₦0.00</span></h3>
+      <h3>Total Supplier Balances <span>₦0.00</span></h3>
+      <h3>Total Capital Balances <span>₦0.00</span></h3>
+      <h3>Total Profit Balances <span>₦0.00</span></h3>
+      <h3>Total Store Balances <span>₦0.00</span></h3>
+    </div>
+    <div class="modal">
+      <h2 style="color: darkgreen;margin: 7px;font-size: 22px;">Total Credit ₦0.00</h2>
+      <h2 style="color: red;margin: 7px;font-size: 22px;">Total Debit ₦0.00</h2>
+      <br />
+      <h1 style="margin: 10px;">MARGIN ₦0.00</h1>
+    </div>
+  </div>
+    </div>
+    <div class="contents" id="account">
+        <h2>Account</h2>
+        <p>Manage your bank and financial accounts here.</p>
+    </div>
+    <div class="contents" id="sales">
+        <h2>Sales Details</h2>
+        <p>Track your sales records and details.</p>
+    </div>
+    <div class="contents" id="transit">
+        <h2>Goods Transit</h2>
+        <p>Monitor goods in transit.</p>
+    </div>
+    <div class="contents" id="inventory">
+        <h2>Inventory Record</h2>
+        <p>View and manage inventory records.</p>
+    </div>
+  </div>
+  <script src="js/dashboard.js"></script>
 </body>
 </html>

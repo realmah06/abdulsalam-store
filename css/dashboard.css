@@ -1,0 +1,120 @@
+.summary{
+  display: flex;
+  height: 250px;
+  align-items: center;
+  align-content: center;
+  width: 100%;
+  background-image: url(/bg6.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100% 230%;
+  justify-content: space-around;
+}
+.summary .item{
+  min-height: 200px;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
+  margin-top: 70px;
+  background: transparent;
+  
+}
+.item i{
+  font-size: 40px;
+  margin: 5px;
+}
+.item p{
+  margin: 5px;
+  font-size: 22px;
+  font-weight: bold;
+}
+.item h3{
+  margin: 5px;
+  font-size: 18px;
+  
+}
+.branches-sales{
+  
+  width: 100%;
+}
+.branches-sales li{
+  list-style: none;
+  display: inline-block;
+  background-color: #F9F9F9;
+  margin: 7px;
+  font-size: 18px;
+  font-weight: 600;
+  width: 450px;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #eee;
+}
+.branches-sales li span{
+  color: darkgreen;
+  float: right;
+  font-weight: bold;
+}
+.tabs{
+  width: 100%;
+  border-bottom: 4px solid #eee;
+  display: grid;
+}
+.tabs .tab{
+  grid-row: 1;
+  text-align: center;
+  padding: 12px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  margin: 5px;
+}
+.tab i{
+  font-size: 35px;
+  margin: 5px;
+}
+.tabs .tab h3{
+  margin: 6px;
+}
+        .tab.active {
+            border: 1px solid #ddd;
+            background: #F4F4F4;
+            transition: 0.5s;
+        }
+        .contents {
+            display: none;
+            padding: 20px;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        .contents.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+.row{
+  display: grid;
+}
+.row .modal{
+  grid-row: 1;
+  padding: 10px;
+}
+.modal input{
+  padding: 8px 12px;
+  font-size: 18px;
+  border: 1px solid #eee;
+  border-radius: 5px;
+  width: 85%;
+  outline: none;
+}
+.modal .accounts{
+  width: 85%;
+  height: 35vh;
+  overflow: scroll;
+}
+.modal h3{
+  margin: 7px;
+}
+.modal h3 span{
+  color: darkgreen;
+}
