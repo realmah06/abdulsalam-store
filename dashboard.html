@@ -78,17 +78,17 @@
       </div>
       <div class="item">
         <i class="bi bi-usb-symbol"></i><br /><br />
-        <p>0.00</p>
+        <p>₦0.00</p>
         <h3>Daily Expenses</h3>
       </div>
       <div class="item">
         <i class="bi bi-unity"></i><br /><br />
-        <p>0.00</p>
+        <p>₦0.00</p>
         <h3>Discount & Offers</h3>
       </div>
       <div class="item">
         <i class="bi bi-bank2"></i><br /><br />
-        <p>0.00</p>
+        <p>₦0.00</p>
         <h3>Confirmed Bank Details</h3>
       </div>
     </div>
@@ -182,43 +182,226 @@
   <hr style="border: 1px solid darkgreen;" />
   <br />
   
-  <div class="row">
-    <div class="modal cred">
-      <!--<small style="font-weight: bold;margin: 8px;font-size: 16px;margin-bottom: 20px;">Total Credit Balances on <span class="current-date"></span></small>-->
-      <br />
-      <h3>Total Customer Balances <span>₦0.00</span></h3>
-      <h3>Total Bank Balances <span>₦0.00</span></h3>
-      <h3>Total Expenses Balances <span>₦0.00</span></h3>
-      <h3>Total Supplier Balances <span>₦0.00</span></h3>
-      <h3>Total Capital Balances <span>₦0.00</span></h3>
-      <h3>Total Profit Balances <span>₦0.00</span></h3>
-      <h3>Total Store Balances <span>₦0.00</span></h3>
-    </div>
-    <div class="modal">
-      <h2 style="color: darkgreen;margin: 7px;font-size: 22px;">Total Credit ₦0.00</h2>
-      <h2 style="color: red;margin: 7px;font-size: 22px;">Total Debit ₦0.00</h2>
-      <br />
-      <h1 style="margin: 10px;">MARGIN ₦0.00</h1>
-    </div>
-  </div>
     </div>
     <div class="contents" id="account" style="padding: 10px;">
       <br /><br />
-      <h2 style="text-align: center;">Bank Transactions Awaiting Confirmation</h2>
-      <hr style="border: 1px solid #eee;"/>
-      <br />
+      <h3 style="margin: 10px;padding10px;">Bank Transactions Waiting to Confirm</h2>
+    <br />
+    <div class="details-header">
+      <button onclick="confirmBank()">Confirm Mark Ones</button>
+    </div>
+    <hr style="border: 1px solid #eee;" />
+    <br />
+    <div class="details-table">
+      <table>
+        <tr>
+          <th>S/No</th>
+          <th>Date<small><em>(time)</em></small></th>
+          <th>Poster</th>
+          <th>Category</th>
+          <th style="width: 45%;">Description</th>
+          <th>Amount</th>
+          <th>Report</th>
+          <th>Discard</th>
+          <th><input type="checkbox"></th>
+        </tr>
+        <tbody>
+          
+          <tr>
+            <td class="no-data" colspan="8">No More Bank Transactions is available at this moment!</td>
+          </tr>
+          
+          <tr>
+            <td colspan="2" style="font-weight: bold;">Grand Total</td>
+            <td colspan="2" style="font-weight: bold;color: green;">₦0.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br /><br /><br />
+    <h2 style="margin: 10px;padding10px;">Confirmed Bank Transactions</h2>
+        <hr style="border: 1px solid #eee;" />
+        <br />
+        <div class="details-table">
+          <table>
+            <tr>
+              <th>S/No</th>
+          <th>Date<small><em>(time)</em></small></th>
+          <th>Poster</th>
+          <th>Category</th>
+          <th style="width: 45%;">Description</th>
+          <th>Amount</th>
+          <th>Status</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td class="no-data" colspan="19">No More Vendor Trucks is available at this moment!</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="font-weight: bold;">Grand Total</td>
+                <td colspan="2" style="font-weight: bold;color: green;">₦0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
     <div class="contents" id="sales">
-        <h2>Sales Details</h2>
-        <p>Track your sales records and details.</p>
+      <h2 style="margin: 10px;padding10px;">Branches Sales Details</h2>
+        <hr style="border: 1px solid #eee;" />
+        <br />
+        <div class="details-table">
+          <table>
+            <tr>
+              <th>S/No</th>
+          <th>Date<small><em>(time)</em></small></th>
+          <th>Store Keeper</th>
+          <th>Branch</th>
+          <th>Invoice No</th>
+          <th>Products</th>
+          <th>Amount</th>
+          <th>Discount</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td class="no-data" colspan="9">No More Branches sales at this  moment!</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="font-weight: bold;">Grand Total</td>
+                <td colspan="2" style="font-weight: bold;color: green;">₦0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
     <div class="contents" id="transit">
-        <h2>Goods Transit</h2>
-        <p>Monitor goods in transit.</p>
+            <h3 style="margin: 10px;padding10px;">Goods Transit Awaiting to Confirm</h2>
+    <br />
+    <div class="details-header">
+      <button onclick="confirmBank()">Confirm Mark Ones</button>
+    </div>
+    <hr style="border: 1px solid #eee;" />
+    <br />
+    <div class="details-table">
+      <table>
+        <tr>
+          <th>S/No</th>
+          <th>Date<small><em>(time)</em></small></th>
+          <th>Poster</th>
+          <th>Supplier</th>
+          <th>Waybill No</th>
+          <th>Description</th>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Cost Price</th>
+          <th>Branch Delivered to</th>
+          <th>Amount</th>
+          <th>Report</th>
+          <th>Discard</th>
+          <th><input type="checkbox"></th>
+        </tr>
+        <tbody>
+          
+          <tr>
+            <td class="no-data" colspan="13">No More Goods Transit is available at this moment!</td>
+          </tr>
+          
+          <tr>
+            <td colspan="2" style="font-weight: bold;">Grand Total</td>
+            <td colspan="2" style="font-weight: bold;color: green;">₦0.00</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <br /><br /><br />
+    <h2 style="margin: 10px;padding10px;">Confirmed Goods Transit</h2>
+        <hr style="border: 1px solid #eee;" />
+        <br />
+        <div class="details-table">
+          <table>
+            <tr>
+             <th>S/No</th>
+          <th>Date<small><em>(time)</em></small></th>
+          <th>Poster</th>
+          <th>Supplier</th>
+          <th>Waybill No</th>
+          <th>Remark</th>
+          <th>Product</th>
+          <th>Qty</th>
+          <th>Cost Price</th>
+          <th>Branch Delivered to</th>
+          <th>Amount</th>
+          <th>Report</th>
+            </tr>
+            <tbody>
+              <tr>
+                <td class="no-data" colspan="12">No More Confirmed Goods Transit available at this moment!</td>
+              </tr>
+              <tr>
+                <td colspan="2" style="font-weight: bold;">Grand Total</td>
+                <td colspan="2" style="font-weight: bold;color: green;">₦0.00</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
     </div>
     <div class="contents" id="inventory">
-        <h2>Inventory Record</h2>
-        <p>View and manage inventory records.</p>
+      <div class="row">
+        <div class="modal">
+          <h2>Cumulative Products List on <span class="current-date"></span></h2>
+          <input type="search" name="search-product" id="search-product" placeholder="Search..."/>
+          <ul class="accounts">
+            
+          </ul>
+        </div>
+      </div>
+      <br /><hr style="border: 1px solid darkgreen;"/><br />
+      <div class="row">
+        <div class="modal">
+          <h3>Shop A-1 & A-2 Al-ameen Plaza Products List</h3>
+          <input type="search" name="search-product" id="search-product" placeholder="Search..."/>
+          <ul class="accounts">
+            
+          </ul>
+        </div>
+        <div class="modal">
+          <h3>Shop No-05 Park Road Sabon Products List</h3>
+          <input type="search" name="search-product" id="search-product" placeholder="Search..."/>
+          <ul class="accounts">
+            
+          </ul>
+        </div>
+        
+          <div class="modal">
+          <h3>Madaci Gwargwaje Branch  Products List</h3>
+          <input type="search" name="search-product" id="search-product" placeholder="Search..."/>
+          <ul class="accounts">
+            
+          </ul>
+        </div>
+        
+        
+        
+      </div>
+      <br /><hr style="border: 1px solid darkgreen;"/><br />
+      <div class="row">
+        <div class="modal">
+          <h3>Zaria Flyover Branch Products List</h3>
+          <input type="search" name="search-product" id="search-product" placeholder="Search..."/>
+          <ul class="accounts">
+            
+          </ul>
+        </div>
+        
+        
+         <div class="modal">
+          <h3>Shop B-12 Tudun Wada Zaria Products List</h3>
+          <input type="search" name="search-product" id="search-product" placeholder="Search..."/>
+          <ul class="accounts">
+            
+          </ul>
+        </div>
+        
+      </div>
     </div>
   </div>
   <footer>
