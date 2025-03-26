@@ -87,15 +87,7 @@
     border-radius: 5rem;
     animation: slideInRight 1s ease-in-out;
   }
-  footer{
-    background-color: #0D2235;
-    padding: 20px 30px;
-    color: #838383;
-    text-align: center;
-    width: 96%;
-    bottom: 0;
-    position: fixed;
-  }
+  
   /* Hidden popup container */
         .popup-container {
             position: fixed;

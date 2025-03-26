@@ -34,20 +34,20 @@
   
 }
 .branches-sales{
+  margin-left: 50px;
   
-  width: 100%;
 }
 .branches-sales li{
   list-style: none;
   display: inline-block;
-  background-color: #F9F9F9;
-  margin: 7px;
-  font-size: 18px;
-  font-weight: 600;
-  width: 450px;
-  padding: 10px 15px;
+  background-color: #F7F7F7;
+  font-weight: bold;
+  font-size: 16px;
+  width: 400px;
+  padding: 15px 20px;
+  margin: 3px;
   border-radius: 5px;
-  border: 1px solid #eee;
+  
 }
 .branches-sales li span{
   color: darkgreen;
@@ -117,4 +117,13 @@
 }
 .modal h3 span{
   color: darkgreen;
+}
+.cred{
+  border-radius: 5px;
+  box-shadow: 0px 0px 1px darkred;
+  width: 70%;
+}
+.cred h3{
+  margin: 10px;
+  font-size: 19px;
 }
