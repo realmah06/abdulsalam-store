@@ -24,6 +24,58 @@
   background-size: 100% 230%;
   justify-content: space-around;
 }
+.details-header{
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.details-header button {
+  padding: 10px 13px;
+  width: 300px;
+  border: none;
+  color: #fff;
+  border-radius: 3px;
+  background-color: #2581D0;
+}
+.details-table{
+  border-top: 1px solid #ABABAB;
+  border-bottom: 1px solid #ABABAB;
+  min-height: 24vh;
+  overflow: scroll;
+  scrollbar-width: none;
+}
+.details-table table{
+  width: 100%;
+  border-collapse: collapse;
+}
+th{
+  text-align: center;
+  border: 1px solid #eee;
+  padding: 10px;
+}
+td{
+  font-size: 17px;
+  text-align: center;
+  padding: 7px;
+  border-bottom: 1px solid #eee;
+  
+}
+.no-data{
+  text-align: center;
+  padding: 15px;
+  border: 1px solid #eee;
+  margin: 15px;
+  height: 40px;
+  font-weight: bold;
+  color: #173272;
+  font-size: 23px;
+  transition: all 0.2s ease-in-out;
+}
+.no-data:hover{
+  background-color: #F5F5F5;
+  letter-spacing: 1px;
+}
 </style>
 <body>
   <div class="nav">
