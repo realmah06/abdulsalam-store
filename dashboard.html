@@ -89,20 +89,20 @@ td{
     </div>
     <div class="list">
       <a href="dashboard.html"><i class="bi bi-house-check"></i> Home</a>
-      <a href="#"><i class="bi bi-receipt-cutoff"></i> Sales Invoice</a>
+      <a href="sales.html"><i class="bi bi-receipt-cutoff"></i> Sales Invoice</a>
       <div class="dropdown">
-        <a href="#"><i class="bi bi-cart4"></i> Inventory Management <i class="bi bi-arrow-down-short"></i></a> <!-- Main Menu -->
+        <a><i class="bi bi-cart4"></i> Inventory Management <i class="bi bi-arrow-down-short"></i></a> <!-- Main Menu -->
         <div class="dropdown-content">
-            <a href="#"><i class="bi bi-cart-plus"></i> Place Order</a>
-            <a href="#"><i class="bi bi-layers"></i> Stock Adjustment </a>
-            <a href="#"><i class="bi bi-shop"></i> Inter-Store Transfer</a>
+            <a href="order.html"><i class="bi bi-cart-plus"></i> Place Order</a>
+            <a href="adjustment.html"><i class="bi bi-layers"></i> Stock Adjustment </a>
+            <a href="transfer.html"><i class="bi bi-shop"></i> Inter-Store Transfer</a>
             <a href="#"><i class="bi bi-bag"></i> Product Refund</a>
             <a href="#"><i class="bi bi-upc-scan"></i> Scanning Barcode</a>
         </div>
     </div>
     
     <div class="dropdown">
-        <a href="#"><i class="bi bi-cash-stack"></i> Account Management <i class="bi bi-arrow-down-short"></i></a> <!-- Main Menu -->
+        <a><i class="bi bi-cash-stack"></i> Account Management <i class="bi bi-arrow-down-short"></i></a> <!-- Main Menu -->
         <div class="dropdown-content">
             <a href="#"><i class="bi bi-coin"></i> &nbsp; Bank Account</a>
             <a href="#"><i class="bi bi-arrows-angle-expand"></i>  &nbsp;Credit & Debit Note </a>
@@ -112,21 +112,21 @@ td{
     </div>
     
     <div class="dropdown">
-        <a href="#"><i class="bi bi-folder-plus"></i> Registration <i class="bi bi-arrow-down-short"></i></a> <!-- Main Menu -->
+        <a><i class="bi bi-folder-plus"></i> Registration <i class="bi bi-arrow-down-short"></i></a> <!-- Main Menu -->
         <div class="dropdown-content">
-            <a href="#"><i class="bi bi-bag-plus"></i> &nbsp;Product Setup</a>
-            <a href="#"><i class="bi bi-person-add"></i> &nbsp; Customer Setup</a>
-            <a href="#"><i class="bi bi-building-add"></i> &nbsp;Supplier Setup</a>
-            <a href="#"><i class="bi bi-database-add"></i> &nbsp; Expenses Setup</a>
-            <a href="#"><i class="bi bi-shop-window"></i> &nbsp; Branch Setup</a>
-            <a href="#"><i class="bi bi-eject"></i> &nbsp; Employee Setup</a>
-            <a href="#"><i class="bi bi-patch-check"></i> &nbsp; User Setup</a>
+            <a href="product html"><i class="bi bi-bag-plus"></i> &nbsp;Product Setup</a>
+<a href="#" onclick="openPopup('customerPopup')"><i class="bi bi-person-add"></i> &nbsp; Customer Setup</a>
+        <a href="#" onclick="openPopup('supplierPopup')"><i class="bi bi-building-add"></i> &nbsp; Supplier Setup</a>
+        <a href="#" onclick="openPopup('expensesPopup')"><i class="bi bi-database-add"></i> &nbsp; Expenses Setup</a>
+        <a href="#" onclick="openPopup('branchPopup')"><i class="bi bi-shop-window"></i> &nbsp; Branch Setup</a>
+        <a href="#" onclick="openPopup('employeePopup')"><i class="bi bi-eject"></i> &nbsp; Employee Setup</a>
+        <a href="#" onclick="openPopup('userPopup')"><i class="bi bi-patch-check"></i> &nbsp; User Setup</a>
         </div>
     </div>
     
-    <a href="#"><i class="bi bi-arrow-up-right-circle"></i> Payroll</a>
-    <a href="#"><i class="bi bi-cloud-haze"></i> Report</a>
-    <a href="#"><i class="bi bi-box-arrow-left"></i> Logout</a>
+    <a href="payroll.html"><i class="bi bi-arrow-up-right-circle"></i> Payroll</a>
+    <a href="report.html"><i class="bi bi-cloud-haze"></i> Report</a>
+    <a href="index.html"><i class="bi bi-box-arrow-left"></i> Logout</a>
     </div>
   </div>
   <div class="content">
@@ -468,6 +468,133 @@ td{
   <footer>
     &copy; <b>Abdulsalam Store Management 2025.</b> || Powered by <b>Mahadi Abubakar</b>
   </footer>
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  <!-- Overlay -->
+    <div id="overlay" class="overlay" onclick="closePopup()"></div>
+
+    <!-- Customer Setup Popup -->
+    <div id="customerPopup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h3>Customer Setup</h3>
+        <br />
+        <form id="customer-registration">
+          <div class="form-group">
+            <div class="form-group">
+              <label for="Add"><input type="radio" name="add" checked> Add</label>
+              <label for="update"><input type="radio" name="update" id="update" /> Update</label>
+              <label for="delete"> <input type="radio" name="delete" id="delete" /> Delete </label>
+            </div>
+          </div>
+          
+          <div class="form-group wt-75">
+            <label for="Select Customer">Select Customer</label>
+            <select name="select-customer" id="select-customer" class="custom-dropdown">
+              <option value=""> -- Select Customer -- </option>
+            </select>
+          </div>
+          <hr style="border: 1px solid darkgreen;" />
+          <br />
+          
+          <div class="form-group wt-100">
+            <label for="Customer Name">Customer Name <span>*</span></label>
+            <input type="text" name="customer-name" id="customer-name" placeholder="Customer Name" class="wt-94" />
+          </div>
+          
+          <div class="form-group wt-100">
+            <label for="Address">Address <span>*</span></label>
+            <textarea name="address" id="address" class="wt-94" cols="5" rows="3" placeholder="Customer's Address"></textarea>
+          </div>
+          
+          <div class="form-group wt-45">
+            <label for="Phone Number">Phone Number <span>*</span></label>
+            <input type="number" name="phone-number" id="phone-number" placeholder="Phone Number" />
+          </div>
+          &nbsp;&nbsp;&nbsp;
+          <div class="form-group wt-45">
+            <label for="Credit Limit">Credit Limit</label>
+            <input type="number" name="credit-limit" id="credit-limit" placeholder="Credit Limit" />
+          </div>
+          <br /><br /><hr style="border: 1px solid #eee;" />
+          <div class="popup-footer">
+            <button type="submit" class="save-btn">Save</button>
+            </form>
+            <button class="closed-btn" type="reset" onclick="closePopup()">Close</button>
+          </div>
+          
+        </form>
+    </div>
+
+    <!-- Supplier Setup Popup -->
+    <div id="supplierPopup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h3>Supplier Setup</h3>
+        <input type="text" placeholder="Supplier Name">
+        <input type="text" placeholder="Company">
+        <input type="text" placeholder="Phone Number">
+        <button>Register</button>
+    </div>
+
+    <!-- Expenses Setup Popup -->
+    <div id="expensesPopup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h3>Expenses Setup</h3>
+        <input type="text" placeholder="Expense Type">
+        <input type="number" placeholder="Amount">
+        <button>Save</button>
+    </div>
+
+    <!-- Branch Setup Popup -->
+    <div id="branchPopup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h3>Branch Setup</h3>
+        <input type="text" placeholder="Branch Name">
+        <input type="text" placeholder="Location">
+        <button>Save</button>
+    </div>
+
+    <!-- Employee Setup Popup -->
+    <div id="employeePopup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h3>Employee Setup</h3>
+        <input type="text" placeholder="Full Name">
+        <input type="text" placeholder="Job Position">
+        <button>Register</button>
+    </div>
+
+    <!-- User Setup Popup -->
+    <div id="userPopup" class="popup">
+        <span class="close-btn" onclick="closePopup()">&times;</span>
+        <h3>User Setup</h3>
+        <input type="text" placeholder="Username">
+        <input type="password" placeholder="Password">
+        <button>Create User</button>
+    </div>
+    
+    
+    
+    
+    
+    
+    
+    
+    <script src="js/script.js"></script>
   <script src="js/dashboard.js"></script>
+  <script>
+    
+  </script>
 </body>
 </html>
